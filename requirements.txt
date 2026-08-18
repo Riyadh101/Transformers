@@ -1,4 +1,13 @@
-streamlit>=1.30
-numpy>=1.24
-pandas>=2.0
-plotly>=5.18
+# Verified for Python 3.14 (the version selected in Streamlit Community Cloud
+# → Advanced settings). Each floor below is the first release that ships a
+# cp314 wheel; anything older forces pip to build from source and the deploy fails.
+streamlit>=1.52          # 1.52.0 is the first release declaring Python 3.14 support
+numpy>=2.3.2
+pandas>=2.3.3
+plotly>=6.0
+
+# For a fully reproducible classroom deploy, pin exact versions instead:
+# streamlit==1.61.1
+# numpy==2.5.2
+# pandas==3.0.5
+# plotly==6.9.0
